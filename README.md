@@ -55,7 +55,9 @@ We use the import syntax to import a module in Python. Here is an example code:
 
 ### Read and work with a file named 'words.csv'
 > import pandas
+
 > df = pandas.read_csv('words.csv')
+
 > print(df) # This will display first few rows from the words.csv file
 
 Note: Similarly we can install other modules and look into their documentations for usage instructions.
