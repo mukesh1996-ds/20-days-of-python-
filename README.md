@@ -75,13 +75,16 @@ A comment is a part of the coding file that the programmer does not want to exec
 To write a comment just add a ‘#’ at the start of the line.
 
 Example 1
-#This is a 'Single-Line Comment'
-print("This is a print statement.")
-Output:
+
+> #This is a 'Single-Line Comment'
+
+> print("This is a print statement.")
+
+> Output:
 
 This is a print statement.
 Example 2
-print("Hello World !!!") #Printing Hello World
+> print("Hello World !!!") #Printing Hello World
 Output:
 
 Hello World !!!
@@ -97,14 +100,22 @@ Example 1: The use of ‘#’.
 
 #It will execute a block of code if a specified condition is true.
 #If the condition is false then it will execute another block of code.
-p = 7
-if (p > 5):
-    print("p is greater than 5.")
-else:
-    print("p is not greater than 5.")
+
+
+> p = 7
+
+> if (p > 5):
+
+>     print("p is greater than 5.")
+
+> else:
+>     print("p is not greater than 5.")
+ 
 Output:
 
 p is greater than 5.
+
+
 Example 2: The use of multiline string.
 
 """This is an if-else statement.
