@@ -346,5 +346,26 @@ Python does not have a character data type, a single character is simply a strin
 
 In Python, individual characters of a String can be accessed by using the method of Indexing. Indexing allows negative address references to access characters from the back of the String, e.g. -1 refers to the last character, -2 refers to the second last character, and so on. 
 
-<img src="C:\Users\mukeshkr\Desktop\WORK\Coding\Personal Data\20-days-of-python-\images\string indexing example.jpg" width="128"/>
+### Reversing a Python String
 
+With Accessing Characters from a string, we can also reverse them. We can Reverse a string by writing [::-1] and the string will be reversed.
+
+### String Slicing
+
+To access a range of characters in the String, the method of slicing is used. Slicing in a String is done by using a Slicing operator (colon). 
+
+### Deleting/Updating from a String
+
+In Python, the Updation or deletion of characters from a String is not allowed. This will cause an error because item assignment or item deletion from a String is not supported. Although deletion of the entire String is possible with the use of a built-in del keyword. This is because Strings are immutable, hence elements of a String cannot be changed once it has been assigned. Only new strings can be reassigned to the same name. 
+
+### Deleting Entire String:
+
+Deletion of the entire string is possible with the use of del keyword. Further, if we try to print the string, this will produce an error because String is deleted and is unavailable to be printed.  
+
+### Escape Sequencing in Python
+While printing Strings with single and double quotes in it causes SyntaxError because String already contains Single and Double Quotes and hence cannot be printed with the use of either of these. Hence, to print such a String either Triple Quotes are used or Escape sequences are used to print such Strings. 
+
+Escape sequences start with a backslash and can be interpreted differently. If single quotes are used to represent a string, then all the single quotes present in the string must be escaped and same is done for Double Quotes. 
+
+### Formatting of Strings
+Strings in Python can be formatted with the use of format() method which is a very versatile and powerful tool for formatting Strings. Format method in String contains curly braces {} as placeholders which can hold arguments according to position or keyword to specify the order.
