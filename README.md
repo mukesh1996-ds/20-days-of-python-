@@ -338,7 +338,7 @@ To convert this we will be using TYPECASTING INSIDE THIS FUNCTION.
 
 A string is a data structure in Python that represents a sequence of characters. It is an immutable data type, meaning that once you have created a string, you cannot change it. Strings are used widely in many different applications, such as storing and manipulating text data, representing names, addresses, and other types of data that can be represented as text.
 
->>  Example: "Mukesh Kumar Sharma
+>>  Example: "Mukesh Kumar Sharma"
 
 Python does not have a character data type, a single character is simply a string with a length of 1. Square brackets can be used to access elements of the string.
 
@@ -418,3 +418,341 @@ Method	Description
 43. translate()-->	Returns a translated string
 44. upper()-->	Converts a string into upper case
 45. zfill()-->	Fills the string with a specified number of 0 values at the beginning
+
+## If else statements 
+
+Python supports the usual logical conditions from mathematics:
+
+1. Equals: a == b
+2. Not Equals: a != b
+3. Less than: a < b
+4. Less than or equal to: a <= b
+5. Greater than: a > b
+6. Greater than or equal to: a >= b
+
+
+These conditions can be used in several ways, most commonly in "if statements" and loops.
+
+An "if statement" is written by using the if keyword.
+
+> Example 
+> a = 33
+> b = 200
+> if b > a:
+  > print("b is greater than a")
+
+### Indentation
+
+Python relies on indentation (whitespace at the beginning of a line) to define scope in the code. Other programming languages often use curly-brackets for this purpose.
+
+### Elif
+The elif keyword is Python's way of saying "if the previous conditions were not true, then try this condition".
+
+> Example 
+
+> a = 33
+> b = 33
+> if b > a:
+  > print("b is greater than a")
+> elif a == b:
+  > print("a and b are equal")
+
+## Else
+The else keyword catches anything which isn't caught by the preceding conditions.
+
+> Example 
+
+> a = 200
+> b = 33
+> if b > a:
+  > print("b is greater than a")
+> elif a == b:
+  > print("a and b are equal")
+> else:
+  > print("a is greater than b")
+
+
+### Nested If
+You can have if statements inside if statements, this is called nested if statements.
+
+> Example
+> x = 41
+
+> if x > 10:
+  > print("Above ten,")
+  > if x > 20:
+    > print("and also above 20!")
+  > else:
+>      print("but not above 20.")
+
+
+
+## Match Case Statements
+
+To implement switch-case like characteristics very similar to if-else functionality, we use a match case in python. If you are coming from a C, C++ or Java like language, you must have heard of switch-case statements. If this is your first language, dont worry as I will tell you everything you need to know about match case statements in this video!
+
+A match statement will compare a given variable’s value to different shapes, also referred to as the pattern. The main idea is to keep on comparing the variable with all the present patterns until it fits into one.
+
+The match case consists of three main entities :
+
+The match keyword
+One or more case clauses
+Expression for each case
+The case clause consists of a pattern to be matched to the variable, a condition to be evaluated if the pattern matches, and a set of statements to be executed if the pattern matches.
+
+Syntax:
+match variable_name:
+
+            case ‘pattern1’ : //statement1
+
+            case ‘pattern2’ : //statement2
+
+            …            
+
+            case ‘pattern n’ : //statement n
+
+Example:
+
+x = 4
+#### x is the variable to match
+
+match x:
+
+    # if x is 0
+
+    case 0:
+
+        print("x is zero")
+
+    # case with if-condition
+
+    case 4 if x % 2 == 0:
+
+        print("x % 2 == 0 and case is 4")
+
+    # Empty case with if-condition
+
+    case _ if x < 10:
+
+        print("x is < 10")
+
+    # default case(will only be matched if the above cases were not matched)
+
+    # so it is basically just an else:
+
+    case _:
+
+        print(x)
+
+
+## Loop
+
+Python programming language provides the following types of loops to handle looping requirements. Python provides three ways for executing the loops. While all the ways provide similar basic functionality, they differ in their syntax and condition-checking time.
+
+While Loop in Python
+In python, a while loop is used to execute a block of statements repeatedly until a given condition is satisfied. And when the condition becomes false, the line immediately after the loop in the program is executed.
+
+> Syntax:
+
+> while expression:
+  >  statement(s)
+
+All the statements indented by the same number of character spaces after a programming construct are considered to be part of a single block of code. Python uses indentation as its method of grouping statements. 
+
+Using else statement with While Loop in Python
+The else clause is only executed when your while condition becomes false. If you break out of the loop, or if an exception is raised, it won’t be executed. 
+
+Syntax of While Loop with else statement:
+
+while condition:
+
+     # execute these statements
+
+else:
+
+     # execute these statements
+
+### Infinite While Loop in Python
+
+If we want a block of code to execute infinite number of time, we can use the while loop in Python to do so.
+
+Note: It is suggested not to use this type of loop as it is a never-ending infinite loop where the condition is always true and you have to forcefully terminate the compiler.
+
+### For Loop 
+
+For loops are used for sequential traversal. For example: traversing a list or string or array etc. In Python, there is “for in” loop which is similar to for each loop in other languages. Let us learn how to use for in loop for sequential traversals.
+
+Syntax:
+
+> for iterator_var in sequence:
+  >   statements(s)
+
+It can be used to iterate over a range and iterators.
+
+
+
+## Nested Loops
+
+Python programming language allows to use one loop inside another loop. Following section shows few examples to illustrate the concept. 
+
+Syntax:
+
+for iterator_var in sequence:
+
+   for iterator_var in sequence:
+
+       statements(s)
+
+   statements(s)
+
+The syntax for a nested while loop statement in the Python programming language is as follows: 
+
+
+while expression:
+
+   while expression: 
+
+       statement(s)
+
+   statement(s)
+
+A final note on loop nesting is that we can put any type of loop inside of any other type of loop. For example, a for loop can be inside a while loop or vice versa.
+
+### Loop Control Statements
+
+Loop control statements change execution from their normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed. Python supports the following control statements. 
+
+### Continue Statement
+the continue statement in Python returns the control to the beginning of the loop.
+
+### Break Statement
+The break statement in Python brings control out of the loop.
+
+### Pass Statement
+
+We use pass statement in Python to write empty loops. Pass is also used for empty control statements, functions and classes.
+
+How for loop in Python works internally?
+
+Before proceeding to this section, you should have a prior understanding of Python Iterators.
+
+Firstly, lets see how a simple for loop looks like.
+
+Here we can see the for loops iterates over iterable object fruit which is a list. Lists, sets, dictionaries are few iterable objects while an integer object is not an iterable object. For loops can iterate over any of these iterable objects.
+
+Now with the help of the above example, let’s dive deep and see what happens internally here.
+
+1. Make the list (iterable) an iterable object with help of the iter() function.
+2. Run an infinite while loop and break only if the StopIteration is raised.
+3. In the try block, we fetch the next element of fruits with the next() function.
+4. After fetching the element we did the operation to be performed with the element. (i.e print(fruit))
+
+
+
+### break statement
+
+The break statement enables a program to skip over a part of the code. A break statement terminates the very loop it lies within.
+
+### Continue Statement
+
+The continue statement skips the rest of the loop statements and causes the next iteration to occur.
+
+## Function 
+
+Python Functions is a block of statements that return the specific task.
+
+The idea is to put some commonly or repeatedly done tasks together and make a function so that instead of writing the same code again and again for different inputs, we can do the function calls to reuse code contained in it over and over again. Some Benefits of Using Functions
+
+1. Increase Code Readability 
+2. Increase Code Reusable
+
+### Types of functions:
+
+1. Built-in library function: These are Standard functions in Python that are available to use.
+2. User-defined function: We can create our own functions based on our requirements.
+
+### Types of Python Function Arguments
+
+Python supports various types of arguments that can be passed at the time of the function call. In Python, we have the following 4 types of function arguments.
+
+0. Default argument
+1. Keyword arguments (named arguments)
+2. Positional arguments
+3. Arbitrary arguments (variable-length arguments *args and **kwargs)
+
+### Default Arguments
+
+A default argument is a parameter that assumes a default value if a value is not provided in the function call for that argument. The following example illustrates Default arguments.
+
+### Keyword Arguments
+
+The idea is to allow the caller to specify the argument name with values so that the caller does not need to remember the order of parameters.
+
+### Positional Arguments
+
+We used the Position argument during the function call so that the first argument (or value) is assigned to name and the second argument (or value) is assigned to age. By changing the position, or if you forget the order of the positions, the values can be used in the wrong places, as shown in the Case-2 example below, where 27 is assigned to the name and Suraj is assigned to the age.
+
+### Arbitrary Keyword  Arguments
+In Python Arbitrary Keyword Arguments, *args, and **kwargs can pass a variable number of arguments to a function using special symbols. There are two special symbols:
+
+> *args in Python (Non-Keyword Arguments)
+> **kwargs in Python (Keyword Arguments)
+
+### Docstring
+
+The first string after the function is called the Document string or Docstring in short. This is used to describe the functionality of the function. The use of docstring in functions is optional but it is considered a good practice.
+
+The below syntax can be used to print out the docstring of a function:
+
+> Syntax: print(function_name.__doc__)
+
+### Python Function within Functions
+
+A function that is defined inside another function is known as the inner function or nested function. Nested functions are able to access variables of the enclosing scope. Inner functions are used so that they can be protected from everything happening outside the function.
+
+### Anonymous functions in Python Function
+
+In Python, an anonymous function means that a function is without a name. As we already know the def keyword is used to define the normal functions and the lambda keyword is used to create anonymous functions. Please see this for details.
+
+Return statement in Python function
+The function return statement is used to exit from a function and go back to the function caller and return the specified value or data item to the caller. The syntax for the return statement is:
+
+> return [expression_list]
+
+The return statement can consist of a variable, an expression, or a constant which is returned at the end of the function execution. If none of the above is present with the return statement a None object is returned.
+
+### Pass by Reference or pass by value
+
+One important thing to note is, in Python every variable name is a reference. When we pass a variable to a function, a new reference to the object is created. Parameter passing in Python is the same as reference passing in Java.
+
+
+## List 
+In Python, lists are used to store multiple data at once. For example,
+
+Suppose we need to record the ages of 5 students. Instead of creating 5 separate variables, we can simply create a list:
+
+* A list is created in Python by placing items inside [], separated by commas. Here, we have created a list named numbers with 3 integer items. A list can have any number of items and they may be of different types (integer, float, string, etc.)
+
+### Access Python List Elements
+In Python, each item in a list is associated with a number. The number is known as a list index.We can access elements of an array using the index number (0, 1, 2 …). The list index always starts with 0. Hence, the first element of a list is present at index 0, not 1.
+
+### Negative Indexing
+Python allows negative indexing for its sequences. The index of -1 refers to the last item, -2 to the second last item and so on.
+
+### Slicing
+In Python it is possible to access a section of items from the list using the slicing operator :, not just a single item.
+
+### Methods in shorts 
+
+1. append()	--> add an item to the end of the list
+2. extend()	--> add items of lists and other iterables to the end of the list
+3. insert()	--> inserts an item at the specified index
+4. remove()	--> removes item present at the given index
+5. pop()	--> returns and removes item present at the given index
+6. clear()	--> removes all items from the list
+7. index()	--> returns the index of the first matched item
+8. count()	--> returns the count of the specified item in the list
+9. sort()	--> sort the list in ascending/descending order
+10. reverse()	--> reverses the item of the list
+11. copy()	--> returns the shallow copy of the list
+
