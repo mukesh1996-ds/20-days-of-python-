@@ -756,3 +756,340 @@ In Python it is possible to access a section of items from the list using the sl
 10. reverse()	--> reverses the item of the list
 11. copy()	--> returns the shallow copy of the list
 
+
+## Tuple 
+A tuple in Python is similar to a list. The difference between the two is that we cannot change the elements of a tuple once it is assigned whereas we can change the elements of a list.
+
+### Creating a Tuple
+A tuple is created by placing all the items (elements) inside parentheses (), separated by commas. The parentheses are optional, however, it is a good practice to use them.
+
+A tuple can have any number of items and they may be of different types (integer, float, list, string, etc.).
+
+### Create a Python Tuple With one Element
+
+In Python, creating a tuple with one element is a bit tricky. Having one element within parentheses is not enough.
+
+We will need a trailing comma to indicate that it is a tuple,
+> var1 = ("Hello") # string
+> var2 = ("Hello",) # tuple
+
+### Access Python Tuple Elements
+
+Like a list, each element of a tuple is represented by index numbers (0, 1, ...) where the first element is at index 0.
+
+We use the index number to access tuple elements. For example,
+
+1. Indexing --> We can use the index operator [] to access an item in a tuple, where the index starts from 0.
+
+2. Negative Indexing --> Python allows negative indexing for its sequences. The index of -1 refers to the last item, -2 to the second last item and so on.
+
+3. Slicing --> We can access a range of items in a tuple by using the slicing operator colon :.
+
+### Advantages of Tuple over List in Python
+Since tuples are quite similar to lists, both of them are used in similar situations.
+
+However, there are certain advantages of implementing a tuple over a list:
+
+* We generally use tuples for heterogeneous (different) data types and lists for homogeneous (similar) data types.
+* Since tuples are immutable, iterating through a tuple is faster than with a list. So there is a slight performance boost.
+* Tuples that contain immutable elements can be used as a key for a dictionary. With lists, this is not possible.
+* If you have data that doesn't change, implementing it as tuple will guarantee that it remains write-protected.
+
+## Recursion
+
+Recursion is the process of defining something in terms of itself.
+
+A physical world example would be to place two parallel mirrors facing each other. Any object in between them would be reflected recursively.
+
+In Python, we know that a function can call other functions. It is even possible for the function to call itself. These types of construct are termed as recursive functions.
+
+The following image shows the working of a recursive function called recurse.
+
+Following is an example of a recursive function to find the factorial of an integer.
+
+Factorial of a number is the product of all the integers from 1 to that number. For example, the factorial of 6 (denoted as 6!) is 1*2*3*4*5*6 = 720.
+
+Our recursion ends when the number reduces to 1. This is called the base condition.
+
+Every recursive function must have a base condition that stops the recursion or else the function calls itself infinitely.
+
+The Python interpreter limits the depths of recursion to help avoid infinite recursions, resulting in stack overflows.
+
+By default, the maximum depth of recursion is 1000. If the limit is crossed, it results in RecursionError. Let's look at one such condition.
+
+
+### Advantages of Recursion
+* Recursive functions make the code look clean and elegant.
+* A complex task can be broken down into simpler sub-problems using recursion.
+* Sequence generation is easier with recursion than using some nested iteration.
+### Disadvantages of Recursion
+* Sometimes the logic behind recursion is hard to follow through.
+* Recursive calls are expensive (inefficient) as they take up a lot of memory and time.
+* Recursive functions are hard to debug.
+
+## Set 
+
+A set is a collection of unique data. That is, elements of a set cannot be duplicate. For example,
+
+Suppose we want to store information about student IDs. Since student IDs cannot be duplicate, we can use a set.
+
+### Create a Set in Python
+In Python, we create sets by placing all the elements inside curly braces {}, separated by comma.
+
+A set can have any number of items and they may be of different types (integer, float, tuple, string etc.). But a set cannot have mutable elements like lists, sets or dictionaries as its elements.
+
+### Create an Empty Set in Python
+Creating an empty set is a bit tricky. Empty curly braces {} will make an empty dictionary in Python.
+
+To make a set without any elements, we use the set() function without any argument. 
+
+### Duplicate Items in a Set
+
+Let's see what will happen if we try to include duplicate items in a set.
+
+### Add Items to a Set in Python
+In Python, we use the add() method to add an item to a set. 
+
+### Update Python Set
+The update() method is used to update the set with items other collection types (lists, tuples, sets, etc). 
+
+### Remove an Element from a Set
+We use the discard() method to remove the specified element from a set.
+
+Built-in Functions with Set
+
+Built-in functions like all(), any(), enumerate(), len(), max(), min(), sorted(), sum() etc. are commonly used with sets to perform different tasks.
+
+Function	Description
+1. all()	--> Returns True if all elements of the set are true (or if the set is empty).
+any()	Returns True if any element of the set is true. If the set is empty, returns False.
+enumerate()	Returns an enumerate object. It contains the index and value for all the items of the set as a pair.
+2. len() --> 	Returns the length (the number of items) in the set.
+3. max() --> 	Returns the largest item in the set.
+4. min()	--> Returns the smallest item in the set.
+5. sorted() --> 	Returns a new sorted list from elements in the set(does not sort the set itself).
+6. sum() -->	Returns the sum of all elements in the set.
+
+
+### Python Set Operations
+
+Python Set provides different built-in methods to perform mathematical set operations like union, intersection, subtraction, and symmetric difference.
+
+* Union of Two Sets --> The union of two sets A and B include all the elements of set A and B.
+* Set Intersection --> The intersection of two sets A and B include the common elements between set A and B.
+* Difference between Two Sets --> The difference between two sets A and B include elements of set A that are not present on set B.
+* Set Symmetric Difference --> The symmetric difference between two sets A and B includes all elements of A and B without the common elements.
+* Check if two sets are equal --> We can use the == operator to check whether two sets are equal or not.
+
+### Methods 
+
+Other Python Set Methods
+There are many set methods, some of which we have already used above. Here is a list of all the methods that are available with the set objects:
+
+Method	Description
+1. add()	Adds an element to the set
+2. clear()	Removes all elements from the set
+3. copy()	Returns a copy of the set
+4. difference()	Returns the difference of two or more sets as a new set
+5. difference_update()	Removes all elements of another set from this set
+6. discard()	Removes an element from the set if it is a member. (Do nothing if the element is not in set)
+7. intersection()	Returns the intersection of two sets as a new set
+8. intersection_update()	Updates the set with the intersection of itself and another
+9. isdisjoint()	Returns True if two sets have a null intersection
+10. issubset()	Returns True if another set contains this set
+11. issuperset()	Returns True if this set contains another set
+12. pop()	Removes and returns an arbitrary set element. Raises KeyError if the set is empty
+13. remove()	Removes an element from the set. If the element is not a member, raises a KeyError
+14. symmetric_difference()	Returns the symmetric difference of two sets as a new set
+15. symmetric_difference_update()	Updates a set with the symmetric difference of itself and another
+16. union()	Returns the union of sets in a new set
+17. update()	Updates the set with the union of itself and others
+
+## Dictionary
+
+Python dictionary is an ordered collection (starting from Python 3.7) of items. It stores elements in key/value pairs. Here, keys are unique identifiers that are associated with each value.
+
+Let's see an example,
+
+If we want to store information about countries and their capitals, we can create a dictionary with country names as keys and capitals as values.
+
+Keys	Values
+
+Nepal	Kathmandu
+
+Italy	Rome
+
+England	London
+
+### Methods 
+
+1. all()	Return True if all keys of the dictionary are True (or if the dictionary is empty).
+2. any()	Return True if any key of the dictionary is true. If the dictionary is empty, return False.
+3. len()	Return the length (the number of items) in the dictionary.
+4. sorted()	Return a new sorted list of keys in the dictionary.
+5. clear()	Removes all items from the dictionary.
+6. keys()	Returns a new object of the dictionary's keys.
+7. values()	Returns a new object of the dictionary's values
+
+### Dictionary Membership Test
+We can test if a key is in a dictionary or not using the keyword in. Notice that the membership test is only for the keys and not for the values.
+> **check code for all examples**
+
+
+## Exception Handling
+An exception is an unexpected event that occurs during program execution. For example,
+> divide_by_zero = 7 / 0
+The above code causes an exception as it is not possible to divide a number by 0.
+
+Logical Errors (Exceptions)
+Errors that occur at runtime (after passing the syntax test) are called exceptions or logical errors.
+
+For instance, they occur when we
+
+* try to open a file(for reading) that does not exist (FileNotFoundError)
+* try to divide a number by zero (ZeroDivisionError)
+* try to import a module that does not exist (ImportError) and so on.
+
+Whenever these types of runtime errors occur, Python creates an exception object.
+
+If not handled properly, it prints a traceback to that error along with some details about why that error occurred.
+
+### Python Built-in Exceptions
+
+Illegal operations can raise exceptions. There are plenty of built-in exceptions in Python that are raised when corresponding errors occur.
+
+We can view all the built-in exceptions using the built-in local() function as follows:
+
+> print(dir(locals()['__builtins__']))
+
+### Error and Exception
+
+Errors represent conditions such as compilation error, syntax error, error in the logical part of the code, library incompatibility, infinite recursion, etc.
+
+Errors are usually beyond the control of the programmer and we should not try to handle errors.
+
+## Exceptions can be caught and handled by the program.
+
+The try...except block is used to handle exceptions in Python. Here's the syntax of try...except block:
+
+"""try:
+    # code that may cause exception
+except:
+    # code to run when exception occurs
+
+"""
+
+Here, we have placed the code that might generate an exception inside the try block. Every try block is followed by an except block.
+
+When an exception occurs, it is caught by the except block. The except block cannot be used without the try block.
+
+### Catching Specific Exceptions in Python
+
+For each try block, there can be zero or more except blocks. Multiple except blocks allow us to handle each exception differently.
+
+The argument type of each except block indicates the type of exception that can be handled by it. 
+
+### try with else clause
+
+In some situations, we might want to run a certain block of code if the code block inside try runs without any errors.
+
+For these cases, you can use the optional else keyword with the try statement.
+
+### try...finally
+In Python, the finally block is always executed no matter whether there is an exception or not.
+
+The finally block is optional. And, for each try block, there can be only one finally block.
+
+## Custon exception
+
+Raising Custom errors
+In python, we can raise custom errors by using the raise keyword.
+
+salary = int(input("Enter salary amount: "))
+if not 2000 < salary < 5000:
+    raise ValueError("Not a valid salary")
+In the previous tutorial, we learned about different built-in exceptions in Python and why it is important to handle exceptions. However, sometimes we may need to create our own custom exceptions that serve our purpose.
+
+Defining Custom Exceptions
+In Python, we can define custom exceptions by creating a new class that is derived from the built-in Exception class.
+
+Here's the syntax to define custom exceptions:
+
+class CustomError(Exception):
+  #### code ...
+  pass
+
+try:
+  #### code ...
+
+except CustomError:
+  #### code...
+
+This is useful because sometimes we might want to do something when a particular exception is raised. For example, sending an error report to the admin, calling an api, etc.
+
+## How importing in python works
+
+Importing in Python is the process of loading code from a Python module into the current script. This allows you to use the functions and variables defined in the module in your current script, as well as any additional modules that the imported module may depend on.
+
+To import a module in Python, you use the import statement followed by the name of the module. For example, to import the math module, which contains a variety of mathematical functions, you would use the following statement:
+
+> import math
+
+Once a module is imported, you can use any of the functions and variables defined in the module by using the dot notation. For example, to use the sqrt function from the math module, you would write:
+
+> import math
+
+> result = math.sqrt(9)
+> print(result)  # Output: 3.0
+
+> from keyword
+
+You can also import specific functions or variables from a module using the from keyword. For example, to import only the sqrt function from the math module, you would write:
+
+> from math import sqrt
+
+> result = sqrt(9)
+> print(result)  # Output: 3.0
+
+You can also import multiple functions or variables at once by separating them with a comma:
+
+> from math import sqrt, pi
+
+> result = sqrt(9)
+> print(result)  # Output: 3.0
+
+> print(pi)  # Output: 3.141592653589793
+
+importing everything
+
+It's also possible to import all functions and variables from a module using the * wildcard. However, this is generally not recommended as it can lead to confusion and make it harder to understand where specific functions and variables are coming from.
+
+> from math import *
+
+> result = sqrt(9)
+> print(result)  # Output: 3.0
+
+> print(pi)  # Output: 3.141592653589793
+
+
+Python also allows you to rename imported modules using the as keyword. This can be useful if you want to use a shorter or more descriptive name for a module, or if you want to avoid naming conflicts with other modules or variables in your code.
+
+> The "as" keyword
+> import math as m
+
+> result = m.sqrt(9)
+> print(result)  # Output: 3.0
+
+> print(m.pi)  # Output: 3.141592653589793
+
+The dir function
+
+Finally, Python has a built-in function called dir that you can use to view the names of all the functions and variables defined in a module. This can be helpful for exploring and understanding the contents of a new module.
+
+> import math
+
+> print(dir(math))
+
+This will output a list of all the names defined in the math module, including functions like sqrt and pi, as well as other variables and constants.
+
+In summary, the import statement in Python allows you to access the functions and variables defined in a module from within your current script. You can import the entire module, specific functions or variables, or use the * wildcard to import everything. You can also use the as keyword to rename a module, and the dir function to view the contents of a module.
