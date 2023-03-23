@@ -1627,3 +1627,40 @@ Python Lambda Functions are anonymous function means that the function is withou
 * You need to keep in your knowledge that lambda functions are syntactically restricted to a single expression.
 * It has various uses in particular fields of programming, besides other types of expressions in functions.
 
+## Map(), Reduce(), and Filter()
+
+In Python, the map, filter, and reduce functions are built-in functions that allow you to apply a function to a sequence of elements and return a new sequence. These functions are known as higher-order functions, as they take other functions as arguments.
+
+1. Map(): The map function applies a function to each element in a sequence and returns a new sequence containing the transformed elements. The map function has the following syntax:
+
+> map(function, iterable)
+The function argument is a function that is applied to each element in the iterable argument. The iterable argument can be a list, tuple, or any other iterable object.
+
+2. Filter(): The filter function filters a sequence of elements based on a given predicate (a function that returns a boolean value) and returns a new sequence containing only the elements that meet the predicate. The filter function has the following syntax:
+
+> filter(predicate, iterable)
+
+The predicate argument is a function that returns a boolean value and is applied to each element in the iterable argument. The iterable argument can be a list, tuple, or any other iterable object.
+
+3. Reduce(): The reduce function is a higher-order function that applies a function to a sequence and returns a single value. It is a part of the functools module in Python and has the following syntax:
+
+> reduce(function, iterable)
+
+The function argument is a function that takes in two arguments and returns a single value. The iterable argument is a sequence of elements, such as a list or tuple.
+
+The reduce function applies the function to the first two elements in the iterable and then applies the function to the result and the next element, and so on. The reduce function returns the final result.
+
+## Method Overloading 
+
+Method overriding is a powerful feature in object-oriented programming that allows you to redefine a method in a derived class. The method in the derived class is said to override the method in the base class. When you create an instance of the derived class and call the overridden method, the version of the method in the derived class is executed, rather than the version in the base class.
+
+In Python, method overriding is a way to customize the behavior of a class based on its specific needs. For example, consider the following base class:
+
+In this example, the Circle class inherits from the Shape class, and overrides the area method. The new implementation of the area method calculates the area of a circle, based on its radius.
+
+It's important to note that when you override a method, the new implementation must have the same method signature as the original method. This means that the number and type of arguments, as well as the return type, must be the same.
+
+Another way to customize the behavior of a class is to call the base class method from the derived class method. To do this, you can use the super function. The super function allows you to call the base class method from the derived class method, and can be useful when you want to extend the behavior of the base class method, rather than replace it.
+
+## Creating Command Line Utilities in Python
+Command line utilities are programs that can be run from the terminal or command line interface, and they are an essential part of many development workflows. In Python, you can create your own command line utilities using the built-in argparse module.
